@@ -5,6 +5,7 @@ import MovieCard from '../../components/moviecard';
 import Button from '../../components/Button';
 import { Colors } from '../../constants/Colors';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { supaUrl, supaAnonKey } from '../../constants/supabase';
 
 const genres = [
 	'Ação',
@@ -16,8 +17,8 @@ const genres = [
 	'Educacional',
 ];
 
-const SUPABASE_URL = 'https://qeshafuubwtpsgkfympk.supabase.co/rest/v1/filmes';
-const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFlc2hhZnV1Ynd0cHNna2Z5bXBrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDgzOTE5OTksImV4cCI6MjA2Mzk2Nzk5OX0.rWwPf21NyBtsMueTL2K1gkFynbzPHfldgpnB2PWxHbo';
+const SUPABASE_URL = `${supaUrl}/rest/v1/filmes`;
+const SUPABASE_KEY = supaAnonKey;
 
 export default function Index() {
 	const router = useRouter();
